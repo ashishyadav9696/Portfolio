@@ -15,13 +15,13 @@ const categories = [
     icon: 'fa fa-server',
     skills: [
       { icon: 'devicon-nodejs-plain colored', name: 'Node.js' },
-      { icon: 'devicon-express-original', name: 'Express.js' },
+      { icon: 'devicon-express-original', name: 'Express.js', color: '#00E5FF' },
       { icon: 'devicon-mongodb-plain colored', name: 'MongoDB' },
-      { icon: 'fa fa-database', name: 'DBMS' },
+      { icon: 'fa fa-database', name: 'DBMS', color: '#00D4AA' },
       { icon: 'devicon-java-plain colored', name: 'Java' },
       { icon: 'devicon-python-plain colored', name: 'Python' },
-      { icon: 'fa fa-plug', name: 'REST APIs' },
-      { icon: 'fa fa-key', name: 'Authentication' },
+      { icon: 'fa fa-plug', name: 'REST APIs', color: '#FF6B9D' },
+      { icon: 'fa fa-key', name: 'Authentication', color: '#FFC107' },
     ],
   },
   {
@@ -30,10 +30,10 @@ const categories = [
     skills: [
       { icon: 'devicon-git-plain colored', name: 'Git & GitHub' },
       { icon: 'devicon-docker-plain colored', name: 'Docker' },
-      { icon: 'fa fa-map-marker', name: 'Mapbox / Leaflet' },
-      { icon: 'fa fa-cloud-upload', name: 'Cloudinary' },
-      { icon: 'fa fa-rocket', name: 'Render Deploy' },
-      { icon: 'fa fa-bar-chart', name: 'Chart.js' },
+      { icon: 'fa fa-map-marker', name: 'Mapbox / Leaflet', color: '#4264fb' },
+      { icon: 'fa fa-cloud-upload', name: 'Cloudinary', color: '#FF9F43' },
+      { icon: 'fa fa-rocket', name: 'Render Deploy', color: '#00D4AA' },
+      { icon: 'fa fa-bar-chart', name: 'Chart.js', color: '#FF6384' },
     ],
   },
 ]
@@ -53,7 +53,7 @@ export default function Skills() {
               <div className="skill-tags">
                 {cat.skills.map((s) => (
                   <div className="skill-tag" key={s.name}>
-                    <i className={s.icon} />
+                    <i className={s.icon} style={s.color ? { color: s.color } : undefined} />
                     <span>{s.name}</span>
                   </div>
                 ))}

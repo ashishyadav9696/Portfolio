@@ -60,12 +60,18 @@ section{position:relative}
 .orbit{position:relative;width:380px;height:380px}
 .orbit-center{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:80px;height:80px;background:var(--glass);border:2px solid var(--glass-border);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 0 40px rgba(108,99,255,0.2);z-index:3}
 .orbit-center i{font-size:3.6rem}
-.orbit-ring{position:absolute;top:50%;left:50%;border-radius:50%;border:1px dashed rgba(108,99,255,0.15)}
+.orbit-ring{position:absolute;top:50%;left:50%;border-radius:50%;border:1px dashed rgba(255,255,255,0.06);pointer-events:none;transition:all .4s ease}
 .orbit-ring-1{width:220px;height:220px;margin:-110px 0 0 -110px;animation:spin 40s linear infinite}
-.orbit-ring-2{width:340px;height:340px;margin:-170px 0 0 -170px;animation:spin 60s linear infinite reverse;border-color:rgba(0,212,170,0.1)}
-.orbit-icon{position:absolute;width:50px;height:50px;border-radius:14px;display:flex;align-items:center;justify-content:center;transition:all .3s ease;border:1.5px solid rgba(255,255,255,0.1);background:rgba(255,255,255,0.04)}
+.orbit-ring-2{width:340px;height:340px;margin:-170px 0 0 -170px;animation:spin 60s linear infinite reverse;border-color:rgba(255,255,255,0.04)}
+.orbit:hover .orbit-ring-1{border-color:rgba(108,99,255,0.15)}
+.orbit:hover .orbit-ring-2{border-color:rgba(0,212,170,0.12)}
+.orbit-ring:has(.orbit-icon:hover){border:2px solid var(--primary);box-shadow:0 0 30px rgba(108,99,255,0.4),inset 0 0 15px rgba(108,99,255,0.2)}
+.orbit-ring-2:has(.orbit-icon:hover){border-color:var(--secondary);box-shadow:0 0 30px rgba(0,212,170,0.4),inset 0 0 15px rgba(0,212,170,0.2)}
+.orbit-icon{position:absolute;width:50px;height:50px;border-radius:14px;display:flex;align-items:center;justify-content:center;transition:all .3s ease;border:1.5px solid rgba(255,255,255,0.1);background:rgba(255,255,255,0.04);cursor:pointer;pointer-events:auto}
 .orbit-icon i{font-size:2.4rem}
-.orbit-icon:hover{transform:scale(1.2)!important}
+.orbit-icon:hover{transform:scale(1.25)!important;z-index:10;filter:brightness(1.2);box-shadow:0 0 25px rgba(255,255,255,0.2)}
+.orbit-icon::after, .orbit-center::after{content:attr(data-title);position:absolute;bottom:calc(100% + 8px);left:50%;transform:translateX(-50%) scale(0.8);background:var(--card);color:#fff;font-size:1.2rem;font-weight:700;padding:4px 10px;border-radius:6px;border:1px solid var(--primary);white-space:nowrap;opacity:0;pointer-events:none;transition:all .3s ease;box-shadow:0 4px 15px rgba(0,0,0,0.5)}
+.orbit-icon:hover::after, .orbit-center:hover::after{opacity:1;transform:translateX(-50%) scale(1)}
 
 /* Ring 1 positions */
 .r1-0{top:-25px;left:calc(50% - 25px);border-color:rgba(97,218,251,0.4);background:rgba(97,218,251,0.08);box-shadow:0 0 20px rgba(97,218,251,0.15)}

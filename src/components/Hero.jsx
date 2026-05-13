@@ -32,16 +32,16 @@ function ParticleCanvas() {
 }
 
 const ring1 = [
-  { icon: 'devicon-react-original colored', cls: 'r1-0' },
-  { icon: 'devicon-nodejs-plain colored', cls: 'r1-1' },
-  { icon: 'devicon-mongodb-plain colored', cls: 'r1-2' },
-  { icon: 'devicon-express-original', cls: 'r1-3' },
+  { icon: 'devicon-react-original colored', cls: 'r1-0', name: 'React.js' },
+  { icon: 'devicon-nodejs-plain colored', cls: 'r1-1', name: 'Node.js' },
+  { icon: 'devicon-mongodb-plain colored', cls: 'r1-2', name: 'MongoDB' },
+  { icon: 'devicon-express-original', cls: 'r1-3', name: 'Express.js' },
 ]
 const ring2 = [
-  { icon: 'devicon-html5-plain colored', cls: 'r2-0' },
-  { icon: 'devicon-css3-plain colored', cls: 'r2-1' },
-  { icon: 'devicon-git-plain colored', cls: 'r2-2' },
-  { icon: 'devicon-github-original', cls: 'r2-3' },
+  { icon: 'devicon-html5-plain colored', cls: 'r2-0', name: 'HTML5' },
+  { icon: 'devicon-css3-plain colored', cls: 'r2-1', name: 'CSS3' },
+  { icon: 'devicon-git-plain colored', cls: 'r2-2', name: 'Git' },
+  { icon: 'devicon-github-original', cls: 'r2-3', name: 'GitHub' },
 ]
 
 export default function Hero() {
@@ -86,15 +86,15 @@ export default function Hero() {
         </div>
         <div className="hero-visual animate-right">
           <div className="orbit">
-            <div className="orbit-center"><i className="devicon-javascript-plain colored" /></div>
+            <div className="orbit-center" data-title="JavaScript"><i className="devicon-javascript-plain colored" /></div>
             <div className="orbit-ring orbit-ring-1">
               {ring1.map((item, i) => (
-                <div className={`orbit-icon ${item.cls}`} key={i}><i className={item.icon} /></div>
+                <div className={`orbit-icon ${item.cls}`} data-title={item.name} key={i}><i className={item.icon} /></div>
               ))}
             </div>
             <div className="orbit-ring orbit-ring-2">
               {ring2.map((item, i) => (
-                <div className={`orbit-icon ${item.cls}`} key={i}><i className={item.icon} /></div>
+                <div className={`orbit-icon ${item.cls}`} data-title={item.name} key={i}><i className={item.icon} /></div>
               ))}
             </div>
           </div>
