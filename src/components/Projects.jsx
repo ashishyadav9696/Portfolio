@@ -15,7 +15,7 @@ const projectsData = [
     ],
     live: 'https://wanderlustproject-bwq5.onrender.com',
     source: 'https://github.com/ashishyadav9696/WanderlustProject.git',
-    img: '/assets/wanderlust.png',
+    img: './assets/wanderlust.png',
   },
   {
     title: 'CleanCity',
@@ -33,7 +33,7 @@ const projectsData = [
     ],
     live: 'https://cleancity-frontend.onrender.com',
     source: 'https://github.com/ashishyadav9696/cleancity-.git',
-    img: '/assets/cleancity.png',
+    img: './assets/cleancity.png',
   },
 ]
 
