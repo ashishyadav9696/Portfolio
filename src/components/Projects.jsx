@@ -35,6 +35,24 @@ const projectsData = [
     source: 'https://github.com/ashishyadav9696/cleancity-.git',
     img: './assets/cleancity.png',
   },
+  {
+    title: 'ChatSphere',
+    type: 'Real-Time Chat Application',
+    badge: '💬 Live',
+    badgeCls: 'badge-live',
+    desc: 'A full-stack real-time messaging platform enabling seamless one-on-one and group conversations. Built with Socket.io for instant bi-directional communication, JWT-based authentication, online presence indicators, message history persistence, and a sleek dark-themed UI with responsive design across all devices.',
+    tags: [
+      { name: 'React', cls: 'react' },
+      { name: 'Node.js', cls: 'node' },
+      { name: 'MongoDB', cls: 'mongo' },
+      { name: 'Socket.io', cls: 'socket' },
+      { name: 'Express', cls: 'express' },
+      { name: 'JWT', cls: 'jwt' },
+    ],
+    live: 'https://chatsphere-frontend-moyv.onrender.com',
+    source: 'https://github.com/ashishyadav9696/RealTimeChat-Application.git',
+    img: '/assets/chatsphere.png',
+  },
 ]
 
 export default function Projects() {
