@@ -51,7 +51,7 @@ const projectsData = [
     ],
     live: 'https://chatsphere-frontend-moyv.onrender.com',
     source: 'https://github.com/ashishyadav9696/RealTimeChat-Application.git',
-    img: '/assets/chatsphere.png',
+    img: './assets/chatsphere.png',
   },
 ]
 
